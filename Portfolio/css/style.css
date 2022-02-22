@@ -1,0 +1,481 @@
+.ignore + div{visibility: hidden;}
+*{
+    font-family: 'Poppins', sans-serif;
+}
+html{
+    scroll-behavior: smooth;
+}
+section{
+    display: block;
+    width: 100%;
+}
+/*--------- Scrollbar ---------*/
+::-webkit-scrollbar {
+    width: 5px;
+}
+::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+::-webkit-scrollbar-thumb {
+    background: #888;
+}
+::-webkit-scrollbar-thumb:hover {
+    background: rgb(129, 125, 125);
+}
+/*------ GoTopButtom -------*/
+.gotopbtn{
+    position: fixed;
+    width: 50px;
+    height: 50px;
+    background: rgb(103, 26, 190);
+    bottom: 5%;
+    right: 3%;
+    text-decoration: none;
+    text-align: center;
+    line-height: 50px;
+    color: white;
+    font-size: 22px;
+}
+/*-------- Banner --------*/
+header{
+    display: relative;
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    background:url(../images/banner.png); 
+    background-size: cover;
+    z-index: 0;
+}
+header::before{
+    content: "";
+    background: rgba(0, 0, 0, 0.6);
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    z-index: -10;
+}
+/*----- Presentation ------*/
+.presentation{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 4% 10% 10% 10%;
+}
+.name{
+    position: relative;
+    color: white;
+    font-size: 35px;
+    letter-spacing: 8px;
+    margin-bottom: 25px;
+    Background: black;
+    animation: text 3s 1;
+    padding-left: 10px;
+
+}
+.specialization{
+    font-size: 20px;
+    color: #ffffff;
+    padding: 1% 0% 7% 0%;
+    position: relative;
+    z-index: -1;
+}
+@keyframes text {
+    0%{
+      color: rgb(0, 0, 0);
+      margin-bottom: -40px;
+    }
+    30%{
+      letter-spacing: 15px;
+      margin-bottom: -40px;
+    }
+    85%{
+      letter-spacing: 5px;
+      margin-bottom: -40px;
+    }
+  }
+/*-------- Skills ---------*/
+.skills{
+    width: 100%;
+    max-width: 600px;
+    padding: 0 20px;
+}
+.skill-name{
+    position: relative;
+    font-size: 18px;
+    color: #f1f1f1;
+    text-transform: uppercase;
+    margin: 20px 0;
+}
+.skill-bar{
+    height: 14px;
+    background: #282828;
+    border-radius: 3px;
+}
+.skill-per{
+    height: 14px;
+    background: #1ba4da;
+    border-radius: 3px;
+    position: relative;
+    animation: fillBars ease 5s 1;
+}
+@keyframes fillBars{
+  from{
+    width: 0;
+  }
+  to{
+    width: 100%;
+  }
+}
+/*-------- Menu ---------*/
+.menu_container{
+    position: initial;
+    display: flex;
+    flex-direction: row-reverse;
+    padding: 15px 40px 0px 0px;
+
+}
+.li_container{
+    display: inline-table;
+}
+.menu_container li{
+    position: relative;
+    display: inline-block;
+    list-style: none;
+    margin: 8px 15px;
+}
+.menu_item{
+    color: white;
+    text-decoration: none;
+}
+.menu_container li::after{
+    content: "";
+    width: 0%;
+    height: 3px;
+    background: rgba(190, 26, 168,.7);
+    display: block;
+    transition: width .5s ease;
+    margin: auto;
+    cursor: pointer;
+    cursor: hand;
+}
+.menu_container li:hover::after{
+    width: 100%;
+}
+/*------ Content -------*/
+
+.specialization{
+    text-align: center;
+}
+.specialization_container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 8%;
+}
+.specialization_info{
+    text-align: center;
+}
+.specialization_container img{
+    width: 50%;
+}
+.specialization_container a{
+    position: -webkit-sticky;
+    position: sticky;
+}
+/*------------------- About -------------------*/
+#about{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+hr{
+  margin: 20px;
+  width: 40%;
+}
+.habilities{
+  padding-top: 25px;
+}
+.spec{
+  text-align: center;
+  font-size: 16px;
+  padding: 10px 10px 10px 10px;
+}
+.img_container{
+  display: flex;
+  align-items: center;
+  margin: 50px auto 100px auto;
+}
+.mysql{
+  width: 200px;
+}
+.git{
+  width: 200px;
+}
+.html_css_js{
+  width: 400px;
+}
+/*------------------- Projects ------------------*/
+
+.projects_container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.projects_hr{
+    width: 60%;
+}
+
+.pr{
+    height: 20rem;
+    width: 45%;
+    background-color: rgb(70, 73, 70);
+    margin: 5rem;
+    box-shadow: 1px 0px 15px 5px rgba(0,0,0,0.38);
+    transition: all 0.5s ease-in-out;
+    
+}
+
+.project1{
+    background: url(../images/youtube.png);
+    background-size: cover;
+}
+
+.pr:hover{
+    width: 50%;
+}
+
+.projects_title{
+    margin-top: 3rem;
+}
+
+
+/*------------------- Contact ------------------*/
+.contact-section{
+  background: url(../images/bg.png) no-repeat center;
+  background-size: cover;
+  padding: 40px 0;
+}
+.contact-section h1{
+  text-align: center;
+  color: #ddd;
+}
+.border{
+  width: 100px;
+  height: 10px;
+  background: #1ba4da;
+  margin: 40px auto;
+}
+
+.contact-form{
+  max-width: 600px;
+  margin: auto;
+  padding: 0 10px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.contact-form-text{
+  display: block;
+  width: 100%;
+  box-sizing: border-box;
+  margin: 16px 0;
+  border: 0;
+  background: #111;
+  padding: 20px 40px;
+  outline: none;
+  color: #ddd;
+  transition: 0.5s;
+}
+.contact-form-text:focus{
+  box-shadow: 0 0 10px 4px #34495e;
+}
+textarea.contact-form-text{
+  resize: none;
+  height: 120px;
+}
+.contact-form-btn{
+    float: right;
+    border: 0;
+    background: #1ba4da;
+    color: #fff;
+    padding: 12px 50px;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: 0.5s;
+}
+.contact-form-btn:hover{
+    background: #66caf1;
+}
+.ok {
+    text-align: center;
+    color: rgb(214, 243, 170);
+    font-size: 1rem;
+    margin-top: 3rem;
+}
+.bad {
+    text-align: center;
+    color: rgb(245, 139, 139);
+    font-size: 1rem;
+    margin-top: 3rem;
+}
+/*------------------- Footer -------------------*/
+footer{
+    background: rgb(0, 0, 0);
+    height: auto;
+    color: #fff;
+}
+.footer-content{
+    display: flex;
+    align-items: center;
+    text-align: center;
+}
+.socials{
+    display: flex;
+    align-items: center;
+    padding: 1% 8% 1% 8%;
+    list-style: none;
+}
+.socials li{
+    margin: 0 15px;
+}
+.socials a{
+    text-decoration: none;
+    color: #fff;
+    border: 1px solid white;
+    padding: 5px;
+    border-radius: 10px;
+}
+.socials a i{
+    width: 23px;
+    transition: color .1s ease;
+}
+a:hover > .fa-facebook{
+    color: rgb(0, 68, 255)
+}
+a:hover > .fa-instagram{
+    color: rgb(241, 137, 0)
+}
+a:hover > .fa-youtube{
+    color: rgb(241, 56, 56)
+}
+a:hover > .fa-linkedin{
+    color: rgb(89, 126, 230)
+}
+a:hover > .fa-github{
+    color: rgb(8, 255, 21)
+}
+.footer-content p{
+    font-size: 14px;
+    word-spacing: 2px;
+}
+.footer-content p a{
+    color:#44bae8;
+    font-size: 16px;
+    text-decoration: none;
+}
+.footer-menu ul{
+    display: flex;
+}
+
+.footer-menu ul li{
+    display: block;
+}
+.footer-menu ul li a{
+    color: #cfd2d6;
+    text-decoration: none;
+    padding: 0px 13px;
+}
+@media (max-width:1024px) {
+    .footer-content{
+        flex-direction: column;
+    }
+    .footer-menu ul li a{
+        padding: 0 10px;
+    }
+    ul.f-menu{
+        padding: 0;
+        width: 100%;
+    }
+    .ignore_contact{
+        display: none;
+    }
+    .socials{
+        margin: auto;
+        padding: 20px 0;
+        padding: 0;
+        width: 100%;
+    }
+    .socials li{
+        margin: 0 5%;
+    }
+    .footer-content p{
+        padding: 10px 0;
+    }
+    .footer-menu{
+        padding: 10px 0;
+    }
+}
+/*---------------- Responsive ---------------*/
+header .fa{
+    display: none;
+}
+@media(max-width: 768px){
+    .gotopbtn{
+        bottom: 3%;
+        right: 5%;
+    }
+    .presentation{
+        padding: 20% 10% 20% 10%;
+    }
+    .menu_container li{
+        display: list-item;
+        padding: 20% 0% 10% 0%;  
+    }
+    .menu_container{
+        position: fixed;
+        flex-direction: column;
+        height: 100vh;
+        width: 200px;
+        background: rgb(216, 67, 97);
+        align-items: start;
+        z-index: 2;
+        right: -220px;
+        padding: 0px 0px 0px 0px;
+        transition: ease .8s ;
+    }
+    .menu_container li::after{
+        content: none;
+    }
+    header .fa {
+        position: relative;
+        display: inline-block;
+        color: white;
+        cursor: pointer;
+        font-size: 25px;
+        padding: 20px;
+    }
+    .bars_container{
+        display: flex;
+        flex-direction: row-reverse;
+    }
+    .specialization{
+        padding: 2% 0% 15% 0%;
+    }
+    .img_container{
+        flex-direction: column;
+        padding: 0;
+        margin: 0 auto 60px auto;
+    }
+    .img_container img{
+      width: 250px;
+    }
+    .projects_title{
+        font-size: 1.5rem;
+    }
+}
